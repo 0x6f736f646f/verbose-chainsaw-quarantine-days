@@ -1,0 +1,13 @@
+[package]
+name = "a06_2_random_service_with_logging"
+version = "0.1.0"
+authors = ["0x6f736f646f <blackd0t@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+pretty_env_logger = "0.2"
+hyper = "0.12"
+rand = "0.5"
