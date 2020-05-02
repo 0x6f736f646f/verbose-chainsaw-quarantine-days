@@ -12,10 +12,10 @@ struct SaleWithProduct {
 
 fn create_db() -> Result<Connection> {
     let username: String = "postgres".to_string();
-    let password: String = "23957070f9f47afea24afb".to_string();
-    let host: String = "127.0.0.1".to_string();
-    let port: String = "1001".to_string();
-    let database: String = "rust-demo".to_string();
+    let password: String = "postgres".to_string();
+    let host: String = "52.170.169.113".to_string();
+    let port: String = "5432".to_string();
+    let database: String = "testdb".to_string();
     let conn: Connection = Connection::connect(
         format!(
             "postgres://{}{}{}@{}{}{}{}{}",
