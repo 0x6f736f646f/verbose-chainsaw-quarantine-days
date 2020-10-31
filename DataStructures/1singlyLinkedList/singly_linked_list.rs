@@ -12,7 +12,7 @@ impl Node {
     // add code here
     fn new(value: String) -> Rc<RefCell<Node>> {
         Rc::new(RefCell::new(Node {
-            value: value,
+            value,
             next: None,
         }))
     }
@@ -36,7 +36,7 @@ impl TransactionLog {
     }
 
     pub fn append(&mut self, value: String){
-        let new = Node::new(value);
+        let new:Node = Node::new(value);
         match self.tail.take() {
             Some(old) => old.borrow_mut().next = Some(new.clone()),
             None => self.head = Some(new.clone())
@@ -64,5 +64,10 @@ impl TransactionLog {
 }
 
 fn main() {
+    TransactionLog::new_empty();
+    TransactionLog::append(6);
+    TransactionLog::append(10);
+    TransactionLog::append(1);
+    TransactionLog::pop();
 
 }
